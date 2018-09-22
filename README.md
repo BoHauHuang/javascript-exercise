@@ -1,2 +1,2 @@
 # javascript-exercise
-  ## Drawing picture with P5
+  #### Drawing picture with P5
