@@ -4,7 +4,7 @@
 
 <div>
   <h3>Snake Game</h3>
-  <li>A traditonal snake game</li>
-  If the snake eat the food, then the snake will grow up.
-  Otherwise, if you hit the margin of the map or eat yourself, you lose.
+  <h4>A traditonal snake game</h4>
+  <li>If the snake eat the food, then the snake will grow up.</li>
+  <li>Otherwise, if you hit the margin of the map or eat yourself, you lose.</li>
 </div>
