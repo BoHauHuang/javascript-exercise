@@ -1,11 +1,13 @@
 var snake;
 var scl = 20;
 var food;
+var fontsize = 60;
 
 function setup(){
 	createCanvas(600,600);
+	textSize(fontsize);
 	snake = new Snake();
-	frameRate(10);
+	
 	pickFoodLocation();
 }
 
@@ -18,14 +20,17 @@ function pickFoodLocation(){
 
 
 function draw(){
+	frameRate(snake.score*0.1+8);
 	background(51);
-	snake.death();
+	drawWords(snake.score);
+
+	if(snake.death()) setup();
 	if(snake.eat(food)) pickFoodLocation();
 	
 	snake.move();
 	snake.show();
 	fill(255,0,100);
-	rect(food.x, food.y, scl, scl);
+	rect(food.x, food.y, scl, scl, 5);
 }
 
 function keyPressed(){
@@ -41,5 +46,10 @@ function keyPressed(){
 	else if(keyCode === RIGHT_ARROW && snake.xspeed != -1){
 		snake.dir(1,0);
 	}
+}
+
+function drawWords(score){
+	fill(255);
+	text(score, width*0.9, height*0.1);
 }
 
