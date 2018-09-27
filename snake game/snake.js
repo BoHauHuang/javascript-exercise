@@ -18,10 +18,9 @@ function pickFoodLocation(){
 	food.mult(scl);
 }
 
-
 function draw(){
 	frameRate(snake.score*0.1+8);
-	background(51);
+	background(60);
 	drawWords(snake.score);
 
 	if(snake.death()) setup();
